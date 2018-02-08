@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0d47d9d783e9fefa0042"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "bd564c8ea434992a1a92"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -5786,7 +5786,7 @@ exports = module.exports = __webpack_require__(33)(undefined);
 
 
 // module
-exports.push([module.i, "body {\r\n    padding: 16px;\r\n}\r\n\r\n.invalid-input-field input{\r\n\tbackground-color: lightpink;\r\n}\r\n\r\n.float-left {\r\n\tfloat: left;\r\n}\r\n\r\n\r\n@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    body {\r\n        padding-top: 50px;\r\n    }\r\n}", ""]);
+exports.push([module.i, "body {\r\n    padding: 16px;\r\n}\r\n\r\n.invalid-input-field input{\r\n\tbackground-color: lightpink;\r\n}\r\n\r\n\r\n@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    body {\r\n        padding-top: 50px;\r\n    }\r\n}", ""]);
 
 // exports
 
@@ -19191,7 +19191,7 @@ function renderApp() {
 renderApp();
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "E:\\projects\\github\\voting-sample\\Voting\\Voting.Client\\ClientApp\\boot.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "E:\\projects\\github\\voting-sample\\Voting\\Voting.Client\\ClientApp\\boot.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "E:\\projects\\github\\test\\voting-sample\\Voting\\Voting.Client\\ClientApp\\boot.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "E:\\projects\\github\\test\\voting-sample\\Voting\\Voting.Client\\ClientApp\\boot.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(21), __webpack_require__(32)(module)))
 
 /***/ }),
@@ -29499,6 +29499,8 @@ if (!module.hot || process.env.NODE_ENV === 'production') {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_isomorphic_fetch__ = __webpack_require__(319);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_isomorphic_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_isomorphic_fetch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Filter__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -29509,6 +29511,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+
 
 
 
@@ -29558,20 +29561,21 @@ var Application = (function (_super) {
             contents);
     };
     Application.renderTable = function (proposals) {
-        return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("table", { className: 'table' },
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("thead", null,
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tr", null,
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Date"),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Summary"),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Author"),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Votes Count"))),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tbody", null, proposals.map(function (p) {
-                return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tr", { key: p.id },
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, p.dateTime),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, p.summary),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, p.author),
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, p.votesCount));
-            })));
+        return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: 'container-fluid' },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("table", { className: 'table table-striped' },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("thead", null,
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tr", null,
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Date"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Summary"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Author"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("th", null, "Votes Count"))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tbody", null, proposals.map(function (p) {
+                    return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("tr", { key: p.id },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, __WEBPACK_IMPORTED_MODULE_3_moment__(p.dateTime).format("DD MMM YYYY")),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, p.summary),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, p.author),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("td", null, p.votesCount));
+                }))));
     };
     return Application;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
@@ -29579,7 +29583,7 @@ var Application = (function (_super) {
 /* harmony default export */ __webpack_exports__["a"] = (Application);
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "E:\\projects\\github\\voting-sample\\Voting\\Voting.Client\\ClientApp\\components\\Application.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "E:\\projects\\github\\voting-sample\\Voting\\Voting.Client\\ClientApp\\components\\Application.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "E:\\projects\\github\\test\\voting-sample\\Voting\\Voting.Client\\ClientApp\\components\\Application.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "E:\\projects\\github\\test\\voting-sample\\Voting\\Voting.Client\\ClientApp\\components\\Application.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(21), __webpack_require__(32)(module)))
 
 /***/ }),
@@ -29674,28 +29678,29 @@ var Filter = (function (_super) {
         return (moment != null && moment.isValid) ? new Date(date) <= moment.toDate() : true;
     };
     Filter.prototype.render = function () {
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "well" },
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h3", null, "Filters"),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-field" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "checkbox", id: "serveLoading", onChange: this.handleServerLoadingFlag, defaultChecked: this.state.useServer }),
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "serveLoading" }, "Use server filtering?")),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-field" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null, "Search by summary"),
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", onKeyUp: this.handleTextSearch })),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: this.state.count < 0 ? "invalid-input-field" : "input-field" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null, "Search by votes count (>=)"),
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", onKeyUp: this.handleNumberSearch })),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "input-field" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { className: "float-left" }, "Search by Date"),
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "float-left" },
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_datepicker__["a" /* default */], { selected: this.state.date, onChange: this.handleDateSearch })))));
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group checkbox" },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { htmlFor: "serveLoading" },
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "checkbox", id: "serveLoading", onChange: this.handleServerLoadingFlag, defaultChecked: this.state.useServer }),
+                    "Use server filtering?")),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group" },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null, "Search by summary:"),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", className: "form-control", onKeyUp: this.handleTextSearch })),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: this.state.count < 0 ? "form-group invalid-input-field" : "form-group" },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null, "Search by votes count (>=):"),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text", className: "form-control", onKeyUp: this.handleNumberSearch })),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "form-group date-picker" },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null, "Search by Date:"),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_datepicker__["a" /* default */], { className: "form-control", selected: this.state.date, onChange: this.handleDateSearch })))));
     };
     return Filter;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
 /* harmony default export */ __webpack_exports__["a"] = (Filter);
 
 
- ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "E:\\projects\\github\\voting-sample\\Voting\\Voting.Client\\ClientApp\\components\\Filter.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "E:\\projects\\github\\voting-sample\\Voting\\Voting.Client\\ClientApp\\components\\Filter.tsx"); } } })();
+ ;(function register() { /* react-hot-loader/webpack */ if (process.env.NODE_ENV !== 'production') { if (typeof __REACT_HOT_LOADER__ === 'undefined') { return; } if (typeof module.exports === 'function') { __REACT_HOT_LOADER__.register(module.exports, 'module.exports', "E:\\projects\\github\\test\\voting-sample\\Voting\\Voting.Client\\ClientApp\\components\\Filter.tsx"); return; } for (var key in module.exports) { if (!Object.prototype.hasOwnProperty.call(module.exports, key)) { continue; } var namedExport = void 0; try { namedExport = module.exports[key]; } catch (err) { continue; } __REACT_HOT_LOADER__.register(namedExport, key, "E:\\projects\\github\\test\\voting-sample\\Voting\\Voting.Client\\ClientApp\\components\\Filter.tsx"); } } })();
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(21), __webpack_require__(32)(module)))
 
 /***/ }),

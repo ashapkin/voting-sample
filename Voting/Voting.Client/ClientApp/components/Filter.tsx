@@ -84,26 +84,27 @@ class Filter extends React.Component<any, FilteringState> {
 
 	render() {
 		return (
-			<div>
+			<div className="well">
 				<h3>Filters</h3>
-				<div className="input-field">
-					<input type="checkbox" id="serveLoading"
+				<div className="form-group checkbox">
+					<label htmlFor="serveLoading">
+					<input type="checkbox" id="serveLoading" 
 						onChange={this.handleServerLoadingFlag}
 					    defaultChecked={this.state.useServer} />
-					<label htmlFor="serveLoading">Use server filtering?</label>
+					Use server filtering?</label>
 				</div>
-				<div className="input-field">
-					<label>Search by summary</label>
-					<input type="text" onKeyUp={this.handleTextSearch}/>
+				<div className="form-group">
+					<label>Search by summary:</label>
+					<input type="text" className="form-control" onKeyUp={this.handleTextSearch}/>
 				</div>
-				<div className={this.state.count < 0 ? "invalid-input-field" : "input-field"}>
-					<label>Search by votes count (>=)</label>
-					<input type="text" onKeyUp={this.handleNumberSearch} />
+				<div className={this.state.count < 0 ? "form-group invalid-input-field" : "form-group"}>
+					<label>Search by votes count (>=):</label>
+					<input type="text" className="form-control" onKeyUp={this.handleNumberSearch} />
 				</div>
-				<div className="input-field">
-					<label className="float-left">Search by Date</label>
-					<div className="float-left">
-						<DatePicker selected={this.state.date} onChange={this.handleDateSearch} />
+				<div className="form-group date-picker">
+					<label>Search by Date:</label>
+					<div>
+						<DatePicker className="form-control" selected={this.state.date} onChange={this.handleDateSearch} />
 					</div>
 				</div>
 			</div>

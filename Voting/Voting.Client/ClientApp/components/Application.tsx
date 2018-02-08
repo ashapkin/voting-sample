@@ -2,6 +2,7 @@ import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 import 'isomorphic-fetch';
 import Filter from './Filter'
+import * as moment from 'moment';
 
 interface FetchDataExampleState {
     proposals: ProposalData[];
@@ -21,7 +22,7 @@ export class Application extends React.Component<{}, FetchDataExampleState> {
     }
 
     loadRemoteData(url : string) {
-		fetch(url)
+        fetch(url)
             .then(response => response.json() as Promise<ProposalData[]>)
             .then(data => {
                 this.setState({ proposals: data, loading: false, initial: data });
@@ -59,26 +60,28 @@ export class Application extends React.Component<{}, FetchDataExampleState> {
     }
 
     private static renderTable(proposals: ProposalData[]) {
-        return <table className='table'>
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Summary</th>
-                    <th>Author</th>
-                    <th>Votes Count</th>
-                </tr>
-            </thead>
-            <tbody>
-                {proposals.map(p =>
-                    <tr key={p.id}>
-                    <td>{ p.dateTime }</td>
-                    <td>{ p.summary }</td>
-                    <td>{ p.author }</td>
-                    <td>{ p.votesCount }</td>
-                </tr>
-            )}
-            </tbody>
-        </table>;
+        return <div className='container-fluid'>
+            <table className='table table-striped'>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Summary</th>
+                        <th>Author</th>
+                        <th>Votes Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {proposals.map(p =>
+                        <tr key={p.id}>
+                        <td>{moment(p.dateTime).format("DD MMM YYYY") }</td>
+                        <td>{ p.summary }</td>
+                        <td>{ p.author }</td>
+                        <td>{ p.votesCount }</td>
+                    </tr>
+                )}
+                </tbody>
+            </table>
+        </div>;
     }
 }
 
